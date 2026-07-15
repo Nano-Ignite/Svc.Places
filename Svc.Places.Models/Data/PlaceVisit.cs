@@ -33,7 +33,7 @@ public class PlaceVisit : BaseEntity
     /// User.
     /// </summary>
     [Include]
-    public virtual User User { get; set; } = null!;
+    public virtual User? User { get; set; }
 
     /// <summary>
     /// Entered At.

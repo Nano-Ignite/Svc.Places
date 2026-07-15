@@ -20,7 +20,7 @@ public class PlaceFavorite : BaseEntity
     /// Place.
     /// </summary>
     [Include]
-    public virtual Place Place { get; set; } = null!;
+    public virtual Place? Place { get; set; }
 
     /// <summary>
     /// User Id.
@@ -32,5 +32,5 @@ public class PlaceFavorite : BaseEntity
     /// User.
     /// </summary>
     [Include]
-    public virtual User User { get; set; } = null!;
+    public virtual User? User { get; set; }
 }

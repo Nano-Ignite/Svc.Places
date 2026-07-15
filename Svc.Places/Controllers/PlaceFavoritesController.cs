@@ -54,7 +54,7 @@ public class PlaceFavoritesController(ILogger<PlaceFavoritesController> logger, 
 
             if (placeFavorite != null)
             {
-                placeFavorite.Place.FavoriteCount++;
+                placeFavorite.Place!.FavoriteCount++;
 
                 await this.Repository
                     .UpdateAsync(placeFavorite.Place, cancellationToken);
@@ -93,7 +93,7 @@ public class PlaceFavoritesController(ILogger<PlaceFavoritesController> logger, 
             return this.NotFound();
         }
 
-        placeFavorite.Place.FavoriteCount--;
+        placeFavorite.Place!.FavoriteCount--;
 
         await this.Repository
             .UpdateAsync(placeFavorite.Place, cancellationToken);

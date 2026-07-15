@@ -18,7 +18,7 @@ public class PlaceFavoriteMapping : BaseEntityMapping<PlaceFavorite>
         base.Configure(builder);
 
         builder
-            .HasQueryFilter(x => x.User.IsActive);
+            .HasQueryFilter(x => x.User!.IsActive);
 
         builder
             .HasOne(x => x.Place)
